@@ -1,0 +1,2 @@
+# carbon
+my laptop configuration
