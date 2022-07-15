@@ -16,6 +16,7 @@ else
 	         4 "Teamiewer" off
 	         5 "Skype" off
 		 6 "Visual Studio Code" off
+		 7 "Slack" off
 		choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
 		for choice in $choices
@@ -64,6 +65,12 @@ else
 				#Visual Studio Code
 				echo "Installing Visual Studio Code"
 				sudo apt install code -y
+				;;
+			
+			7)
+				#Slack
+				echo "Installing Slack"
+				sudo snap install slack --classic -y
 				;;
 			esac
 	done
