@@ -15,6 +15,7 @@ else
 	         3 "Google Chrome" off
 	         4 "Teamiewer" off
 	         5 "Skype" off
+		 6 "Visual Studio Code" off
 		choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
 		for choice in $choices
@@ -58,6 +59,11 @@ else
 				echo "deb https://repo.skype.com/deb stable main" | tee /etc/apt/sources.list.d/skypeforlinux.list
 				apt update 
 				apt install skypeforlinux -y
+				;;
+			6)
+				#Visual Studio Code
+				echo "Installing Visual Studio Code"
+				sudo apt install code -y
 				;;
 			esac
 	done
